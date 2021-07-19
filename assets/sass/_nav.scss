@@ -1,0 +1,55 @@
+@import "variables";
+.netflix {
+  &_header {
+    display: flex;
+    width: 100%;
+    padding: 0 5%;
+    align-items: center;
+    justify-content: space-between;
+
+    &_navigation {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      &_logo {
+        display: block;
+        height: fit-content;
+        width: max-content;
+        margin-right: 5rem;
+        a {
+          color: $red-color;
+          font-weight: bold;
+          text-decoration: none;
+        }
+      }
+
+      &_links {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 40rem;
+
+        a {
+          display: block;
+          width: fit-content;
+          margin: 0 0.5%;
+          text-decoration: none;
+          color: $black-color;
+          border-bottom-width: 0rem;
+          border-bottom-style: solid;
+          border-bottom-color: $red-color;
+          &:hover {
+            border-bottom-width: 0.2rem;
+          }
+        }
+      }
+    }
+
+    &_userInfo {
+      img {
+        display: none;
+      }
+    }
+  }
+}
