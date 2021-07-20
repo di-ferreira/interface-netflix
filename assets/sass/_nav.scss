@@ -3,11 +3,14 @@
 
 .netflix {
   &_header {
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
     display: flex;
     width: 100%;
     padding: 0.5rem 2.5%;
     color: $white-color;
-    @include black-colorRGBA(0.4);
     align-items: center;
     justify-content: space-between;
 
@@ -90,6 +93,7 @@
         border: solid 0.2rem $darkRed-color;
         overflow: hidden;
         margin-left: 1rem;
+        cursor: pointer;
         border-radius: 50%;
         -webkit-border-radius: 50%;
         -moz-border-radius: 50%;

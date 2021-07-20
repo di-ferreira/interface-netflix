@@ -1,0 +1,19 @@
+@import "variables";
+@import "mixin.scss";
+
+.netflix {
+  &_btn {
+    &_play,
+    &_favorite {
+      border: none;
+      color: $white-color;
+      background-color: $red-color;
+      padding: 0.3rem 0.8rem;
+      border-radius: 1rem;
+      -webkit-border-radius: 1rem;
+      -moz-border-radius: 1rem;
+      -ms-border-radius: 1rem;
+      -o-border-radius: 1rem;
+    }
+  }
+}

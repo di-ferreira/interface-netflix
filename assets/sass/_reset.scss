@@ -1,4 +1,5 @@
 @import "variables";
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -14,13 +15,19 @@ body {
   height: 100vh;
   font-family: $default-font, sans-serif;
   font-size: 1.4rem;
-  overflow: hidden;
+  overflow: hidden auto;
+  background-color: $dark-color;
+  color: $white-color;
 }
 
 ul,
 ol,
 li {
   list-style: none;
+}
+
+button {
+  cursor: pointer;
 }
 
 select,

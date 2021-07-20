@@ -1,0 +1,129 @@
+@import "variables";
+@import "mixin.scss";
+
+.netflix {
+  &_content {
+    width: 100%;
+    margin-bottom: 5rem;
+
+    &_spotlight {
+      position: relative;
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+      height: 60rem;
+      overflow: hidden;
+
+      &::after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: rgb(0, 0, 0);
+        background: linear-gradient(
+          90deg,
+          rgba($dark-color, 1) 35%,
+          rgba($dark-color, 0.3) 85%
+        );
+      }
+      &_img {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+
+        img {
+          position: absolute;
+          width: fit-content;
+          right: -35rem;
+          top: -30rem;
+        }
+      }
+
+      &_details {
+        z-index: 10;
+        color: $white-color;
+        position: absolute;
+        width: 40%;
+        left: 5rem;
+        bottom: 10%;
+
+        h1 {
+          font-size: 2.5rem;
+          font-weight: bold;
+          margin-bottom: 1rem;
+        }
+
+        p {
+          font-size: 1.4rem;
+          line-height: 2rem;
+          word-break: keep-all;
+          margin-bottom: 2rem;
+        }
+
+        .netflix_btn_play,
+        .netflix_btn_favorite {
+          padding: 0 6% !important;
+          font-size: 1.5rem;
+          font-weight: bold;
+          height: 2.5rem;
+          margin-right: 3rem;
+
+          i {
+            margin-left: 0.5rem;
+          }
+        }
+
+        .netflix_btn_play {
+          box-shadow: 0rem 0rem 2rem 0.1rem rgba($red-color, 1);
+        }
+      }
+    }
+
+    &_section,
+    &_watching {
+      background-color: green;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 50rem;
+      padding: 0 5rem;
+      margin: 2.5rem 0;
+      overflow: hidden;
+    }
+
+    &_watching {
+      h2 {
+        display: block;
+        border-left: solid 0.3rem $red-color;
+        padding-left: 1rem;
+        margin-bottom: 1rem;
+        font-size: 2.5rem;
+      }
+
+      ul {
+        display: flex;
+        width: max-content;
+        height: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .netflix {
+    &_content {
+      &_spotlight {
+        &_img {
+          img {
+            right: -60rem;
+            top: -30rem;
+          }
+        }
+        &_details {
+          width: 50%;
+        }
+      }
+    }
+  }
+}
