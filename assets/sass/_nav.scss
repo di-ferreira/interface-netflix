@@ -1,9 +1,13 @@
 @import "variables";
+@import "mixin.scss";
+
 .netflix {
   &_header {
     display: flex;
     width: 100%;
-    padding: 0 5%;
+    padding: 0.5rem 2.5%;
+    color: $white-color;
+    @include black-colorRGBA(0.4);
     align-items: center;
     justify-content: space-between;
 
@@ -35,7 +39,7 @@
           width: fit-content;
           margin: 0 0.5%;
           text-decoration: none;
-          color: $black-color;
+          color: $white-color;
           border-bottom-width: 0rem;
           border-bottom-style: solid;
           border-bottom-color: $red-color;
@@ -47,8 +51,54 @@
     }
 
     &_userInfo {
-      img {
-        display: none;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      width: 20rem;
+      height: 100%;
+
+      &_search,
+      &_notifications {
+        display: block;
+        margin: 0 1rem;
+        font-size: 1.7rem;
+        cursor: pointer;
+      }
+
+      &_notifications {
+        position: relative;
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 0.7rem;
+          height: 0.7rem;
+          background-color: $red-color;
+          border-radius: 50%;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          -ms-border-radius: 50%;
+          -o-border-radius: 50%;
+        }
+      }
+
+      &_avatar {
+        width: 4rem;
+        height: 4rem;
+        border: solid 0.2rem $darkRed-color;
+        overflow: hidden;
+        margin-left: 1rem;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+
+        img {
+          width: 100%;
+        }
       }
     }
   }
