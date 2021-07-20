@@ -82,7 +82,6 @@
 
     &_section,
     &_watching {
-      background-color: green;
       display: flex;
       flex-direction: column;
       width: 100%;
@@ -105,6 +104,92 @@
         display: flex;
         width: max-content;
         height: 100%;
+        overflow: hidden;
+
+        li {
+          position: relative;
+          display: flex;
+          flex-direction: row-reverse;
+          width: fit-content;
+
+          .netflix_content_img {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40rem;
+            height: 20rem;
+            overflow: hidden;
+            border-radius: 1rem;
+            -webkit-border-radius: 1rem;
+            -moz-border-radius: 1rem;
+            -ms-border-radius: 1rem;
+            -o-border-radius: 1rem;
+
+            .netflix_btn_play {
+              z-index: 2;
+              position: relative;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 5rem;
+              height: 5rem;
+              background-color: $white-color;
+              color: $red-color;
+              font-size: 2rem;
+              border-radius: 50%;
+              -webkit-border-radius: 50%;
+              -moz-border-radius: 50%;
+              -ms-border-radius: 50%;
+              -o-border-radius: 50%;
+
+              &::after {
+                z-index: -1;
+                content: "";
+                position: absolute;
+                top: -10%;
+                left: -10%;
+                width: 6rem;
+                height: 6rem;
+                background-color: $white-color;
+                opacity: 0.5;
+                border-radius: 50%;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                -ms-border-radius: 50%;
+                -o-border-radius: 50%;
+              }
+            }
+
+            img {
+              position: absolute;
+              left: -15rem;
+              top: 0;
+              width: 150%;
+            }
+
+            &::after {
+              content: "";
+              top: 0;
+              left: 2.5%;
+              position: absolute;
+              width: 95%;
+              height: 97%;
+              border-bottom: solid 0.3rem $gray-color;
+            }
+
+            &::before {
+              z-index: 100;
+              content: "";
+              top: 0;
+              left: 2.5%;
+              position: absolute;
+              width: 52%;
+              height: 97%;
+              border-bottom: solid 0.3rem $red-color;
+            }
+          }
+        }
       }
     }
   }
