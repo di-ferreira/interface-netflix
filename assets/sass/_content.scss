@@ -49,6 +49,12 @@
         bottom: 10%;
 
         h1 {
+          img {
+            width: 70%;
+          }
+        }
+
+        h2 {
           font-size: 2.5rem;
           font-weight: bold;
           margin-bottom: 1rem;
@@ -85,9 +91,9 @@
       display: flex;
       flex-direction: column;
       width: 100%;
-      height: 50rem;
+      height: fit-content;
       padding: 0 5rem;
-      margin: 2.5rem 0;
+      margin: 3.5rem 0 4.5rem 0;
       overflow: hidden;
     }
 
@@ -111,6 +117,67 @@
           display: flex;
           flex-direction: row-reverse;
           width: fit-content;
+
+          .netflix_content_info {
+            width: 30rem;
+            margin: 0.5rem 1rem 0 2rem;
+
+            h1 {
+              img {
+                width: 50%;
+              }
+            }
+
+            h2 {
+              font-size: 2rem;
+              border: none;
+              margin-bottom: 1rem;
+              margin-left: 0;
+              padding-left: 0;
+            }
+
+            p {
+              line-height: 2rem;
+              margin-bottom: 2rem;
+            }
+
+            .netflix_btn_play {
+              padding: 0.5rem 1rem;
+              margin-right: 0.5rem;
+              border-radius: 0.5rem;
+              box-shadow: 0rem 0rem 0rem 0.1rem rgba($red-color, 1);
+              -webkit-border-radius: 0.5rem;
+              -moz-border-radius: 0.5rem;
+              -ms-border-radius: 0.5rem;
+              -o-border-radius: 0.5rem;
+              transition: all 0.5s ease;
+              -webkit-transition: all 0.5s ease;
+              -moz-transition: all 0.5s ease;
+              -ms-transition: all 0.5s ease;
+              -o-transition: all 0.5s ease;
+
+              &:hover {
+                box-shadow: 0rem 0rem 2rem 0.1rem rgba($red-color, 1);
+                transition: all 0.5s ease;
+                -webkit-transition: all 0.5s ease;
+                -moz-transition: all 0.5s ease;
+                -ms-transition: all 0.5s ease;
+                -o-transition: all 0.5s ease;
+              }
+            }
+
+            .netflix_btn_favorite {
+              background-color: $white-color;
+              color: $black-color;
+              padding: 0.5rem 1rem;
+              margin-left: 0.5rem;
+              border-radius: 0.5rem;
+              -webkit-border-radius: 0.5rem;
+              -moz-border-radius: 0.5rem;
+              -ms-border-radius: 0.5rem;
+              -o-border-radius: 0.5rem;
+            }
+          }
 
           .netflix_content_img {
             position: relative;
