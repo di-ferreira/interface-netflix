@@ -6,6 +6,12 @@
     width: 100%;
     margin-bottom: 5rem;
 
+    #carroussel {
+      width: 105%;
+      height: max-content;
+      overflow: hidden;
+    }
+
     &_spotlight {
       position: relative;
       display: flex;
@@ -111,7 +117,7 @@
     }
 
     &_rightArrow {
-      right: 2.5rem;
+      right: 1rem;
     }
 
     &_section,
